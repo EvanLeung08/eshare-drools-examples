@@ -1,4 +1,4 @@
-package com.eshare.drools.model;
+package com.eshare.drools.examples;
 
 import lombok.Data;
 

@@ -1,11 +1,9 @@
-package com.eshare.drools;
+package com.eshare.drools.examples;
 
 
-import com.eshare.drools.model.Message;
 import org.drools.core.event.DebugAgendaEventListener;
 import org.drools.core.event.DebugRuleRuntimeEventListener;
 import org.kie.api.KieServices;
-import org.kie.api.cdi.KSession;
 import org.kie.api.logger.KieRuntimeLogger;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

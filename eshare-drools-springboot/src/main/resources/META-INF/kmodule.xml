@@ -6,4 +6,7 @@
         <ksession name="HelloWorldKS"/>
     </kbase>
 
+    <kbase name="userScoreKB" packages="com.eshare.drools">
+        <ksession name="userScoreKS"/>
+    </kbase>
 </kmodule>

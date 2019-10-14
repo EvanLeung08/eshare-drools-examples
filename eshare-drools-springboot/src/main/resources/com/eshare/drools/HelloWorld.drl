@@ -1,5 +1,5 @@
 package com.eshare.drools;
-import com.eshare.drools.model.Message;
+import com.eshare.drools.examples.Message;
 rule "Hello World"
   when
     m : Message( status == Message.HELLO, message : message )

@@ -1,0 +1,64 @@
+/**
+ * 计算额外积分金额 规则如下: 订单原价金额
+ * 100以下, 不加分
+ * 100-500 加100分
+ * 500-1000 加500分
+ * 1000 以上 加1000分
+ */
+
+package com.eshare.drools;
+import com.eshare.drools.examples.Order
+
+function void hello(String ruleName){
+   System.out.println("触发了规则:"+ruleName);
+}
+
+rule "不加积分"
+       no-loop true
+       lock-on-active true
+       salience 1
+       when
+           $s : Order(amount <= 100)
+       then
+           $s.setScore(0);
+           update($s);
+           hello("不加积分");
+end
+
+
+rule "加100分"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $s : Order(amount > 100 && amount<=500)
+    then
+        $s.setScore(100);
+        update($s);
+        hello("加100分");
+end
+
+rule "加500分"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $s : Order(500 < amount && amount<= 1000)
+    then
+        $s.setScore(500);
+        update($s);
+        hello("不加积分");
+end
+
+rule "加1000分"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $s : Order(1000 < amount)
+    then
+        $s.setScore(1000);
+        update($s);
+        hello("不加积分");
+end
+
