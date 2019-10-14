@@ -6,7 +6,7 @@
  * 1000 以上 加1000分
  */
 
-package com.eshare.drools;
+package com.eshare.drools.examples;
 import com.eshare.drools.examples.Order
 
 function void hello(String ruleName){
@@ -47,7 +47,7 @@ rule "加500分"
     then
         $s.setScore(500);
         update($s);
-        hello("不加积分");
+        hello("加500分");
 end
 
 rule "加1000分"
@@ -59,6 +59,6 @@ rule "加1000分"
     then
         $s.setScore(1000);
         update($s);
-        hello("不加积分");
+        hello("加1000分");
 end
 

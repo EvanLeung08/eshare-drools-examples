@@ -1,4 +1,4 @@
-package com.eshare.drools;
+package com.eshare.drools.examples;
 import com.eshare.drools.examples.Message;
 rule "Hello World"
   when
